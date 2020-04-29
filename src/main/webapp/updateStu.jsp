@@ -18,9 +18,9 @@
 <form action="StuServlet?type=updateStu" method="post" onsubmit="return validate_form(this)">
     <input type="hidden" name="id" value="${student.id}">
     姓名：<input type="text" name="name" value="${student.name}">
-    生日：<input type="text" name="birthday" value="<%= StringDateUtil.dateToString(((Student)request.getAttribute("student")).getBirthday())%>">
+    生日：<input type="date" name="birthday" value="<%= StringDateUtil.dateToString(((Student)request.getAttribute("student")).getBirthday())%>">
     备注：<input type="text" name="description" value="${student.description}">
-    平均分：<input type="text" name="avgscore" value="${student.avgscore}">
+    平均分：<input type="number" name="avgscore" value="${student.avgscore}">
     <input type="submit" value="提交">
 </form>
 </body>
